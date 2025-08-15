@@ -2,7 +2,7 @@
 
 A simple and intuitive **web application** to create professional resumes instantly. Fill in your details, add skills, education, projects, and experience, and generate a polished, downloadable resume.
 
-**Live Demo:** [View Here](https://your-live-link.com)
+**Live Demo:** https://himanshu-97-cloud.github.io/Resume-Builder/
 
 ## Features ✨
 
