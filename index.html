@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="resume1.css">
+</head>
+<body>
+    
+    <main>
+
+        <div class="logo">
+
+        </div>
+
+        <div class="header">
+            <h1>Build Your Perfect Resume in Minutes</h1>
+            <p>Create professional resumes instantly with our 
+                easy-to-use resume builder. Fill in your details, add skills, projects, education, and experience,
+                 and generate a polished, ready-to-download resume in seconds.</p>
+        </div>
+
+
+        <div class="nav-bar">
+            <ul>
+                <li><a data-target="profile" class="active">Profile</a></li>
+                <li><a data-target="summary">Summary</a></li>
+                <li><a data-target="skills">Skills</a></li>
+                <li><a data-target="education">Education</a></li>
+                <li><a data-target="pprojects">Projects</a></li>
+                <li><a data-target="experience">Experience</a></li>
+                <li><a data-target="interest">Interests</a></li>
+            </ul>
+        </div>
+
+
+        <section>
+
+            <div class="profile-container box">
+                <h3>Profile</h3>
+                <form>
+                    <div class="text-field">
+                        <label for="fName">First Name</label>
+                        <input type="text" name="fName" id="fName" placeholder="eg. Rohit">
+                    </div>
+                    <div class="text-field">
+                        <label for="lName">Last Name</label>
+                        <input type="text" name="lName" id="lName" placeholder="eg. Sharma">
+                    </div>
+                    <div class="text-field">
+                        <label for="city">City</label>
+                        <input type="text" name="city" id="city" placeholder="eg. Mumbai">
+                    </div>
+                    <div class="text-field">
+                        <label for="State">State</label>
+                        <input type="text" name="state" id="state" placeholder="eg. Mahahrastra">
+                    </div>
+                    <div class="text-field">
+                        <label for="pin">Pincode</label>
+                        <input type="number" name="pin" id="pin" placeholder="eg. 400001">
+                    </div>
+                    <div class="text-field">
+                        <label for="phone">Phone</label>
+                        <input type="tel" name="phone" id="phone" placeholder="eg. +91 8957462148">
+                    </div>
+                    <div class="text-field">
+                        <label for="mail">E-mail</label>
+                        <input type="email" name="mail" id="mail" placeholder="eg. rohit.sharma@example.com">
+                    </div>
+                </form>
+
+                <div class="additional-links">
+                    <h3>Additional Links</h3>
+                    <div class="links-section">
+                        <div class="text-field">
+                            <label for="link1">LinkedIn</label>
+                            <input type="text" name="link1" id="link1" placeholder="eg. https://linkedin.com/in/rohitsharma">
+                        </div>
+                        <div class="text-field">
+                            <label for="link2">GitHub</label>
+                            <input type="text" name="link2" id="link2" placeholder="eg. https://github.com/rohitsharma">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="next-page">
+                    <button class="create" onclick="createResume()">Create Resume</button>
+                    <button onclick="nextPage()">Next</button>
+                </div>
+            </div>
+
+
+
+            <div class="summary-container box" style="display: none;">
+                <div class="summaryPage">
+                    <h3>Summary</h3>
+                    <div class="text-field">
+                        <textarea name="summary" id="summary" cols="120" rows="7" placeholder="eg. A dedicated software developer with experience in building web and mobile applications using JavaScript, Python, and React."></textarea>
+                    </div>
+                </div>
+
+                <div class="next-page">
+                    <button class="create" onclick="createResume()">Create Resume</button>
+                    <button onclick="nextPage()">Next</button>
+                </div>
+            </div>
+
+
+
+            <div class="skills-container box" style="display: none;">
+                <div class="skillsPage">
+                    <h3>Skills</h3>
+                    <p class="addingmore" onclick="addSkill()">Add More Skills</p>
+                    <ul>
+                        <li><input type="text" name="skills" id="skill" placeholder="eg. JavaScript"></li>
+                        <li><input type="text" name="skills" id="skill" placeholder="eg. Python"></li>
+                        <li><input type="text" name="skills" id="skill" placeholder="eg. Node.js"></li>
+                    </ul>
+
+                    <div class="next-page">
+                        <button class="create" onclick="createResume()">Create Resume</button>
+                        <button onclick="nextPage()">Next</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="education-container box" style="display: none;">
+                <h3>Education</h3>
+                <p class="addingmore" onclick="addEducation()">Add More Education</p>
+                <div class="educationPage">
+                    <div class="text-field">
+                        <label for="course">Course / Degree Name</label>
+                        <input type="text" name="course" id="course" placeholder="eg. B.tech CSE">
+                    </div>
+                    <div class="text-field">
+                        <label for="college">School / College Name</label>
+                        <input type="text" name="college" id="college" placeholder="eg. IIT Bombay">
+                    </div>
+                    <div class="text-field">
+                        <label for="cCity">City</label>
+                        <input type="text" name="cCity" id="cCity" placeholder="eg. Mumbai">
+                    </div>
+                    <div class="text-field">
+                        <label for="cState">State</label>
+                        <input type="text" name="cState" id="cState" placeholder="eg. Mahahrastra">
+                    </div>
+                    <div class="text-field">
+                        <label for="eSDate">Start Date</label>
+                        <input type="month" name="eSDate" id="eSDate">
+                    </div>
+                    <div class="text-field">
+                        <label for="eEDate">End Date</label>
+                        <input type="month" name="eEDate" id="eEDate">
+                    </div>
+                </div>
+
+                <div class="next-page">
+                    <button class="create" onclick="createResume()">Create Resume</button>
+                        <button onclick="nextPage()">Next</button>
+                </div>
+            </div>
+
+
+
+            <div class="projects-container box" style="display: none;">
+                <h3>Projects</h3>
+                <p class="addingmore" onclick="addProject()">Add More Projects</p>
+                <div class="projectsPage">
+                    <div class="text-field">
+                        <label for="pName">Project Name</label>
+                        <input type="text" name="pName" id="pName" placeholder="eg. Portfolio Webiste">
+                    </div>
+                    <div class="text-field">
+                        <label for="pSDate">Start Date</label>
+                        <input type="month" name="pSDate" id="pSDate">
+                    </div>
+                    <div class="text-field">
+                        <label for="pEDate">End Date</label>
+                        <input type="month" name="pEDate" id="pEDate">
+                    </div> <br>
+                    <div class="IDesc">
+                        <label for="pDesc">Description</label>
+                        <textarea name="pDesc" id="pDesc" cols="120" rows="5" placeholder="eg. Created a responsive personal portfolio website using HTML, CSS, and JavaScript."></textarea>
+                    </div>
+                </div>
+
+                <div class="next-page">
+                    <button class="create" onclick="createResume()">Create Resume</button>
+                        <button onclick="nextPage()">Next</button>
+                </div>
+            </div>
+
+
+
+            <div class="experience-container box" style="display: none;">
+                <h3>Experience</h3>
+                <p class="addingmore" onclick="addExperience()">Add More Experience</p>
+                <div class="experiencePage">
+                    <div class="text-field">
+                        <label for="companyName">Company Name</label>
+                        <input type="text" name="companyName" id="companyName" placeholder="eg. Tata Consultancy Services">
+                    </div>
+                    <div class="text-field">
+                        <label for="jobTitle">Job Title</label>
+                        <input type="text" name="jobTitle" id="jobTitle" placeholder="eg. Software Intern">
+                    </div>
+                    <div class="text-field">
+                        <label for="companyCity">City</label>
+                        <input type="text" name="companyCity" id="companyCity" placeholder="eg. Mumbai">
+                    </div>
+                    <div class="text-field">
+                        <label for="companyState">State</label>
+                        <input type="text" name="companyState" id="companyState" placeholder="eg. Mahahrastra">
+                    </div>
+                    <div class="text-field">
+                        <label for="companySDate">Start Date</label>
+                        <input type="month" name="companySDate" id="companySDate">
+                    </div>
+                    <div class="text-field">
+                        <label for="companyEDate">End Date</label>
+                        <input type="month" name="companyEDate" id="companyEDate">
+                    </div>
+                </div>
+
+                <div class="next-page">
+                    <button class="create" onclick="createResume()">Create Resume</button>
+                        <button onclick="nextPage()">Next</button>
+                </div>
+            </div>
+
+
+
+             <div class="interests-container box" style="display: none;">
+                <div class="interestPage">
+                    <h3>Hobbies / Interests</h3>
+                    <p class="addingmore" onclick="addInterest()">Add More Hobbies / Interests</p>
+                    <ul>
+                        <li><input type="text" name="interest" id="interest1" placeholder="eg. Cricket"></li>
+                        <li><input type="text" name="interest" id="interest2" placeholder="eg. Travelling"></li>
+                        <li><input type="text" name="interest" id="interest3" placeholder="eg. Cooking"></li>
+                    </ul>
+
+                    <div class="next-page">
+                        <button class="create" onclick="createResume()">Create Resume</button>
+                        <button onclick="nextPage()">Next</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <script src="resume1.js"></script>
+
+</body>
+</html>
